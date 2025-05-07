@@ -1,0 +1,120 @@
+#header {
+    padding: 20px 0;
+    z-index: 123;
+    position: sticky;
+    top: 0;
+    background-color: $white;
+}
+.logo {
+    font-size: 0;
+    img {
+        width: 205px;
+        @include media-1199 { 
+            width: 180px;
+        }
+        @include media-767 { 
+            width: 160px;
+        }
+    }
+}
+
+.main-menu {
+    ul {
+        font-size: $px18;
+        gap: 24px;
+        line-height: 1.33;
+        font-weight: 500;
+        @include media-max-1339 {
+            gap: 20px;
+            font-size: $px17;
+        }
+        @include media-1199 {
+            gap: 13px;
+            font-size: $px15;
+        }
+        @include media-991 {
+            font-size: $px17;
+        }
+        @include media-767 {
+            font-size: $px16;
+        }
+        li {
+            @include media-991 {
+                padding: 4px 15px;
+            }
+            @include media-767 {
+                padding: 3px 15px;
+            }
+            a {
+                @include media-991 {
+                    display: block;
+                    padding: 5px 0;
+                }
+            }
+        }
+    }
+}
+.header-menus {
+    gap: 32px;
+    @include media-1199 { 
+        gap: 20px;
+    }
+    @include media-991 {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 100%;
+        background-color: $white;padding-bottom: 20px;
+        .btn {
+            margin-left: 15px;margin-top: 5px
+        }
+        @include menu-mob-shadow;
+
+    }
+}
+#nav-icon1 {
+    width: 40px;
+    height: 23px;
+    transform: rotate(0deg);
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+    @media (max-width: 767px) {
+        width: 36px;
+    }
+    span {
+        display: block;
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        background-color: $blue;
+        border-radius: 0;
+        opacity: 1;
+        transform: rotate(0deg);
+        transition: 0.25s ease-in-out;         
+      &:nth-child(1) {
+        top: 0px;
+      }
+      &:nth-child(2) {
+        top: 10px;
+      }
+      &:nth-child(3) {
+        top: 20px;
+      }
+    }  
+    &.open{
+      span{
+        &:nth-child(1) {
+          top: 10px;
+          transform: rotate(130deg);
+        }
+        &:nth-child(3) {
+          top: 10px;
+          transform: rotate(-130deg);
+        }
+        &:nth-child(2){opacity: 0}
+      }
+    }    
+}

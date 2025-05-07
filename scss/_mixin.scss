@@ -1,0 +1,125 @@
+@mixin media-min-575 {
+  @media screen and (min-width: 575px) {
+    @content;
+  }
+}
+@mixin media-min-768 {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+@mixin media-min-992 {
+  @media screen and (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin media-min-1210 {
+  @media screen and (min-width: 1210px) {
+    @content; 
+  }
+}
+@mixin media-1749 {
+  @media screen and (max-width: 1799px) {
+    @content;
+  }
+}
+@mixin media-1699 {
+  @media screen and (max-width: 1699px) {
+    @content;
+  }
+}
+@mixin media-1439 {
+  @media screen and (max-width: 1439px) {
+    @content;
+  }
+}
+@mixin media-1399 {
+  @media screen and (max-width: 1399px) {
+    @content;
+  }
+}
+@mixin media-max-1339 {
+  @media screen and (max-width: 1339px) {
+    @content; 
+  }
+}
+
+@mixin media-1199 {
+  @media screen and (max-width: 1199px) {
+    @content;
+  }
+}
+@mixin media-991 {
+  @media screen and (max-width: 991px) {
+    @content;
+  }
+}
+@mixin media-767 {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+@mixin media-575 {
+  @media screen and (max-width: 575px) {
+    @content;
+  }
+}
+@mixin media-479 {
+  @media screen and (max-width: 479px) {
+    @content;
+  }
+}
+@mixin media-449 {
+  @media screen and (max-width: 449px) {
+    @content;
+  }
+}
+@mixin media-379 {
+  @media screen and (max-width: 449px) {
+    @content;
+  }
+}
+@mixin media-359 {
+  @media screen and (max-width: 359px) {
+    @content;
+  }
+}
+
+@mixin menu-mob-shadow{
+  box-shadow: 0px 3px 10px -10px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 0px 3px 10px -10px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 3px 10px -10px rgba(0,0,0,0.75);
+}
+@mixin skyBg {
+  background: #344BBD;
+  background: -webkit-linear-gradient(to right, #344BBD 0%, #7C8BDA 100%);
+  background: -moz-linear-gradient(to right, #344BBD 0%, #7C8BDA 100%);
+  background: -o-linear-gradient(to right, #344BBD 0%, #7C8BDA 100%);
+  background: linear-gradient(to right, #344BBD 0%, #7C8BDA 100%);
+}
+@mixin gradientpurple{
+  background-color: rgba(118, 135, 220, 0.3);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(118, 135, 220, 0.3)), to(rgba(239, 242, 255, 0.3)));
+    background: -o-linear-gradient(top, rgba(118, 135, 220, 0.3) 0%, rgba(239, 242, 255, 0.3) 100%);
+    background: linear-gradient(180deg, rgba(118, 135, 220, 0.3) 0%, rgba(239, 242, 255, 0.3) 100%);
+}
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+/*Responsive Breakpoint END */
+
+
+/*
+@include media-min-768
+@include media-min-992
+@include media-1699
+@include media-1439
+@include media-1209
+@include media-991
+@include media-767
+@include media-575
+@include media-359
+*/
