@@ -1,0 +1,148 @@
+.top-footer {
+    padding: 165px 0 40px;
+    color: $white;
+    @include font-size(16);
+    font-weight: 500;
+    line-height: 1.38;
+    p{
+        margin: 0;
+    }
+    
+    .flex-row {
+        row-gap: 25px ;
+    }
+    .logo {
+        margin-bottom: 25px;
+        @include media-575 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    }
+    @include media-767 {
+        @include font-size(14);
+        padding: 40px 0 25px;
+    }
+    @include media-575 {
+        text-align: center;
+    }
+    
+}
+.btm-footer {
+    padding: 15px 0;
+    
+    ul {
+        @include font-size(14);
+        li {
+            font-weight: 500;
+            line-height: 1.45;
+        }
+        @include media-575 {
+            @include font-size(12);
+        }
+    }
+}
+
+.footer-left{
+    max-width: 394px;
+    width: 100%;
+    p{
+        color:$whiteLight ;
+    }
+    @include media-767 {
+        margin: 0 auto;
+    }
+}
+.footer-menus{
+    gap: 20px;
+    @include media-767 {
+        gap: 15px;
+    }
+    h6 {
+        text-transform: uppercase;
+        color: $lightBlue02;
+        line-height: 1.48;
+        @include font-size(16);
+        margin: 0;
+        @include media-767 {
+            @include font-size(14);
+        }
+    }
+    ul {
+        gap: 20px;
+        @include media-767 {
+            gap: 15px;
+        }
+    }
+}
+.footer-contact{
+    padding-top: 100px;
+    row-gap: 20px;
+    @include media-991 {
+        padding-top: 65px;
+    }
+    @include media-767 {
+        padding-top: 50px;
+    }
+    @include media-575 {
+        padding-top: 35px;
+    }
+}
+.contact-links {
+    gap: 60px ;
+    @include media-1199 {
+        gap: 40px;
+    }
+    @include media-575 {
+        flex-wrap: wrap;
+        gap: 10px;
+        width: 100%;
+    }
+    li {
+        font-size: 40px;
+        font-weight: 400;
+        line-height: 1;
+        @include media-max-1339 {
+            font-size: 36px;
+        }
+        @include media-1199 {
+            font-size: 32px;
+        }
+        @include media-991 {
+            font-size: 24px;
+        }
+        @include media-767 {
+            font-size: 20px;
+        }
+        @include media-575 {
+            width: 100%;
+            font-size: 18px;
+            text-align: center;
+        }
+    }
+}
+.social-icons {
+    font-size: 21px;
+    gap: 25px;
+    color: $lightBlue03;
+    @include media-575 {
+        width: 100%;
+    }
+    li {
+        a:hover {
+            opacity: 0.6;
+        }
+    }
+}
+.footer-menus-wrap {
+    @include media-575 {
+        row-gap: 30px;
+        justify-content: center;
+        .footer-menus {
+            width: 50%;
+            max-width: 50%;
+            &:nth-child(2) {
+                order: 1;
+            }
+        }
+    }
+}

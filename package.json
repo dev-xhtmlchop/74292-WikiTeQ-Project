@@ -13,8 +13,6 @@
   },
   "dependencies": {
     "autoprefixer": "^10.4.13",
-    "bootstrap-icons": "^1.11.3",
-    "foundation-sites": "^6.7.5",
     "gulp-clean": "^0.4.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-dart-sass": "^1.0.2",
@@ -22,6 +20,7 @@
     "gulp-postcss": "^9.0.1",
     "gulp-rename": "^2.0.0",
     "gulp-sourcemaps": "^3.0.0",
-    "gulp-wait": "^0.0.2"
+    "gulp-wait": "^0.0.2",
+    "postcss-sorting": "^9.1.0"
   }
 }
