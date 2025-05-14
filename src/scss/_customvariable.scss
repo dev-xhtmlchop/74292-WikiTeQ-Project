@@ -1,5 +1,3 @@
-
-
 $white : #fff;
 $body-bg :$white ;
 $black :#000000;
@@ -18,6 +16,17 @@ $sky_color : #4997ca;
 $grayColor : #929292;
 $grayColor02: #8388A1;
 $form_border : rgba(131,136,160,0.40);
-$font-family-sans-serif: "Urbanist", sans-serif;;
+$font-family-sans-serif: "Urbanist", sans-serif;
+
+
+// vw = (max - min) 
+// vw = (1440 - 320) * 100
+
+$fluid-title-h1 : clamp(28px, 4.444vw, 64px);
+$fluid-title-h2 : clamp(26px, 4.167vw, 60px);	
+$fluid-title-h3 : clamp(24px, 3.056vw, 44px);
+$fluid-title-h4 : clamp(22px, 2.5vw, 36px);
+$fluid-title-h5 : clamp(17px, 1.4vw, 24px);
+$fluid-title-h6 : clamp(14px, 1vw, 18px);
 
 

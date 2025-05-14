@@ -36,105 +36,34 @@ a:hover{
 h1 {
 	font-weight: 600;
 	line-height: 1.10;
-	@include font-size(64);
-	@include media-max-1339 {
-		@include font-size(58);
-	}
-	@include media-1199  {
-		@include font-size(48);
-	}
-	@include media-991 {
-		@include font-size(42);
-	}
-	@include media-767 {
-		@include font-size(36);
-	}
-	@include media-575 {
-		@include font-size(30);
-	}
+	font-size: $fluid-title-h1;
 }
-h2 {
-	@include font-size(60);
+h2 {	
 	line-height: 1.15;
 	font-weight: 600;
-	@include media-max-1339 {
-		@include font-size(54);
-	}
-	@include media-1199  {
-		@include font-size(46);
-	}
-	@include media-991 {
-		@include font-size(40)
-	}
-	@include media-767 {
-		@include font-size(32);
-	}
-	@include media-575 {
-		@include font-size(27);
-	}
+	font-size: $fluid-title-h2;
 }
 h3 {
-	@include font-size(44);
+	font-size: $fluid-title-h3;
 	line-height: 1.10;
 	font-weight: 600;
 	color: $secondaryColor;
-	@include media-1199 {
-		@include font-size(40);
-	}
-	@include media-991 {
-		@include font-size(36);
-	}
-	@include media-767 {
-		@include font-size(32);
-	}
-	@include media-575 {
-		@include font-size(26);
-	}
 }
 h4 {
-	@include font-size(36);
+	font-size: $fluid-title-h4;
 	font-weight: 500;
-	@include media-1199 {
-		@include font-size(32);
-	}
-	@include media-991 {
-		@include font-size(30);
-	}
-	@include media-767 {
-		@include font-size(24);
-	}
-	@include media-575 {
-		@include font-size(22);
-	}
+	line-height: 1.25;
 }
 h5 {
-	@include font-size(24);
+	font-size: $fluid-title-h5;
 	line-height: 1;
 	color: $secondaryColor;
-	@include media-1199 {
-		@include font-size(22);
-	}
-	@include media-991 {
-		@include font-size(20);
-	}
-	@include media-767 {
-		@include font-size(18);
-	}
-	@include media-575 {
-		@include font-size(17);
-	}
 }
 h6 {
-	@include font-size(18);
+	font-size: $fluid-title-h6;
 	line-height: 1.33;
 	color: $black;
 	font-weight: bold;
-	@include media-991 {
-		font-size: 16px;
-	}
-	@include media-767 {
-		font-size: 14px;
-	}
 }
 .img-cover {
 	font-size: 0;
