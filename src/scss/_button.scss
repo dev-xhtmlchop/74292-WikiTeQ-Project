@@ -14,7 +14,7 @@
     border-radius: 8px;
     font-weight: 600;
     @include media-1199 { 
-        @include font-size(15);
+        @include font-size(14);
         padding: 15px 20px;
     }
     @include media-767 { 
@@ -23,10 +23,10 @@
     &.btn-sm {
         padding: 12px 25px;
         @include media-1199 { 
-            padding: 11px 20px;
+            padding: 11px 16px;
         }
         @include media-767 { 
-            padding: 10px 15px;
+            padding: 10px 14px;
             height: 42px;
         }
     }

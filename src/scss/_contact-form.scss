@@ -1,0 +1,139 @@
+.contact-section{
+    @include skyBg;
+    padding: 75px 0;
+    @include border-radius(20px);
+    @include media-991  {
+		padding: 60px 0;
+	}
+	@include media-767   {
+		padding: 45px 0;
+        @include border-radius(12px);
+	}
+    .flex-row{
+        row-gap: 40px;
+    }
+    .check-list {
+        li {
+            &:before {
+                background-image: url('../images/white-check.svg');
+                background-repeat: no-repeat;
+                background-position: top center;
+            }
+        }
+    }
+}
+.contact-btm {
+    gap: 10px;
+    
+}
+.contact-form {
+    background-image: url('../images/form-bg.svg');
+    background-size: cover;
+    background-position: top right;
+    @include border-radius(20px);
+    overflow: hidden;
+    padding: 45px;
+    padding-top: 0;
+    @include media-1199 {
+        padding: 25px;
+        padding-top: 0;
+    }
+    @include media-767 {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    @include media-575 {
+        padding: 20px;
+        padding-top: 0;
+    }
+    form {
+        background-color: $white;
+        gap: 14px;
+        @include media-1199 { 
+            gap: 10px;
+        }
+    }
+}
+
+.contact-left {
+    gap: 30px;
+    color: $white;
+    max-width: 540px;
+    @include media-767 {
+        max-width: 100%;
+    }
+    .contact-top {
+        p{
+            font-weight: 400;
+            color : $whiteLight;
+            @include font-size(18);
+        }
+        h3 {
+            margin-bottom: 25px;
+            color: $white;
+        }
+    }
+    .contact-btm {
+        border-top: 1px solid $white;
+        padding-top: 12px;@include font-size(16);
+        @include media-1199 {
+            @include font-size(14);
+        }
+        p {
+            font-weight: 400;
+        }
+    }
+}
+
+
+.contact-right{
+    padding-left: 50px;
+}
+.form-head{
+    padding: 40px 0 60px;
+    text-align: right;
+    @include media-1199 {
+        padding: 30px 0;
+    }
+}
+.form-group{
+    font-size: 0;
+    .form-control {
+        background-color: transparent;
+        height: 56px;
+        padding: 0 18px;
+        outline: none;
+        box-shadow: none;
+        @include border-radius(8px);
+        @include font-size(18);
+        line-height: 1.33;
+        font-weight: 500;
+        color: $grayColor02;
+        border: 1px solid $form_border;
+        width: 100%;
+        resize: none;
+        
+        @include media-1199 {
+            height: 50px;
+            @include font-size(16);
+        }
+        @include media-575 {
+            padding: 0 15px;
+        }
+    }   
+    textarea {
+        &.form-control  {
+            height: 125px;
+            padding: 010px 18px;
+            @include media-max-1339 {
+                height: 115px;
+            }
+            @include media-1199 {
+                height: 100px;
+            }
+            @include media-575 {
+                padding: 10px 15px;
+            }
+        }
+    }
+}

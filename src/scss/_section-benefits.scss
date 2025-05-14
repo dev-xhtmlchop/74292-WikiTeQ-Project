@@ -1,0 +1,106 @@
+.section-benefits {
+    padding: 90px 0 80px;
+    @include border-radius(20px);
+    @include media-767 {   
+        padding: 60px 0;
+    }
+    @include media-575 {   
+        padding: 45px 0;
+    }
+    h3 {
+        margin-bottom: 60px;
+        @include media-991 {
+            margin-bottom: 45px;
+        }
+        @include media-767 {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.benefits-row{
+    row-gap: 30px;
+    margin: 0 -20px;
+    @include media-1199 {
+        margin: 0 -13px;
+    }
+    @include media-767 {  
+        margin: 0 -10px;
+        row-gap: 20px;
+    }
+    > div {
+        padding: 0 20px;
+        @include media-1199 {
+            padding: 0 13px;
+        }
+        @include media-767 {  
+            padding: 0 10px;
+        }
+    }
+}
+.benefits-icons{
+    background-color: $blue;
+    @include border-radius(10px);
+    width: 82px;
+    height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {max-width: 60%;}
+    @include media-449 {
+        width: 72px;
+        height: 72px;
+    }
+    @include media-449 {
+       
+    }
+}
+.benefits-item{
+    background-image: url(../images/whit-box.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right top;
+    @include border-radius(10px);
+    overflow: hidden;
+    padding: 40px 25px 25px;
+    color: $primaryColor;
+    @include media-1199 { 
+        padding: 35px 15px 15px;
+    }
+    @include media-575 { 
+        min-height: 230px;
+    }
+    .count-num {
+        margin-bottom: 50px;
+        display: block;
+        color: $grayColor;
+        @include font-size(18);
+        font-weight: 500;
+        @include media-767 { 
+            margin-bottom: 42px;
+        }
+    }
+    h5 {
+        margin-bottom: 15px;
+        @include media-767 {  
+            margin-bottom: 10px;
+        }
+    }
+    p{
+        @include font-size(14);
+        @include media-767 {  
+            @include font-size(13);
+        }
+    }
+}
+.benefits-bg{
+    @include border-radius(20px);    
+    overflow: hidden;
+    aspect-ratio: 1/0.5;
+    margin-top: 12px;
+    max-height: 400px;
+    width: 100%;
+    @include media-767   {
+        
+    }
+}

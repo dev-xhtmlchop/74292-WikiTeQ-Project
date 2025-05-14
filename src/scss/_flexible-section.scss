@@ -1,0 +1,176 @@
+
+.flexible-solution-sec {
+    h3 {
+        text-align: center;
+        margin-bottom: 48px
+    }
+}
+.flexible-image{
+    @include border-radius(20px);
+    @include media-767 {
+        @include border-radius(12px);
+    }
+    position: relative;
+    z-index: 1;
+    
+    img {
+        @include border-radius(20px);
+        @include media-575 {
+            @include border-radius(12px);
+        }
+    }
+    &:before{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: -20px;
+        width: calc(100% + 20px);
+        height: calc(100% + 40px);
+        background-color: $white;
+        z-index: -1;
+        @include border-radius(20px);
+        @include media-767 {
+           display: none;
+        }
+        
+    }
+    &.right-no-radius{
+        @include media-min-768 {
+            border-bottom-right-radius: 0;
+            border-top-right-radius: 0;
+            img {
+                border-bottom-right-radius: 0;
+                border-top-right-radius: 0;
+            }
+        }
+        
+        
+    }
+}
+.flexible-solution-wrapper{
+    gap: 65px;
+    @include media-1199 {
+        gap: 50px;
+    }
+    @include gradientpurple;
+    overflow: hidden;
+    @include border-radius(20px);
+    @include media-767 {
+        @include border-radius(20px);
+        padding-bottom: 35px;
+    }
+    @include media-575 {
+        @include border-radius(16px);
+    }
+    .flexible-solution-row{
+        &:nth-child(even) {
+            .flexible-image{
+                &:before{
+                    border-bottom-left-radius: 0;
+                    border-top-left-radius: 0;
+                }
+            }
+        }
+        .flexible-solution-text{
+            ul {
+                margin: 0;
+                li {
+                    list-style: none;
+                    padding-left: 18px;
+                    position: relative;
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 6px;
+                        border-radius: 50%;
+                        width: 6px;
+                        height: 6px;
+                        opacity:1;
+                        background-color: $blue
+                    }
+                }
+            }
+        }
+        &:nth-child(odd) {
+            .flexible-solution-text{
+                order: -1;
+                padding-left: 80px;
+                @include media-1199 {
+                    padding-left: 50px;
+                }
+                @include media-991 {
+                    padding-left:35px;
+                }
+                @include media-767 {
+                    order: 1;
+                }
+                @include media-575 {
+                    padding-left:20px;
+                }
+                
+            }
+            .flexible-image{
+                &:before{
+                    left: -20px;
+                    border-bottom-right-radius: 0;
+                    border-top-right-radius: 0;
+                }
+            }
+        }
+        &:first-child ,
+        &:last-child {
+            .flexible-solution-image {
+                .flexible-image:after {
+                    @include media-1199 {
+                        display: none;
+                    }
+                    content: '';
+                    position: absolute;
+                    left: calc(100% + 20px);
+                    bottom: 0;
+                    background-image: url(../images/white-curve.png);
+                    width: 20px;
+                    height: 21px;                
+                    background-position: top right;
+                    background-size: contain;
+                };
+            }
+        }
+        &:first-child {
+            .flexible-solution-image {
+                .flexible-image:after {
+                    right: calc(100% + 20px);
+                    left: auto;
+                    top: 0;
+                    bottom: auto;
+                    background-image: url(../images/white-curve-02.png);
+                    background-position: top left;
+                };
+            }
+        }
+    }
+}
+
+.flex-sol-item{
+    width: 47%;
+    @include media-991 {
+        width: 48%;
+    }
+    @include media-767 {
+        width: 100%;
+    }
+}
+
+.flexible-solution-text{
+    padding: 35px 50px;
+    @include media-max-1339 {
+        padding: 30px 30px;
+    }
+    @include media-991 {
+        padding: 25px 15px;
+    }
+    @include media-767 { 
+        padding-bottom: 0;
+    }
+}

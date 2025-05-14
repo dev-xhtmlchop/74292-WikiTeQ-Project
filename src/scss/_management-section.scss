@@ -1,0 +1,64 @@
+.management-section {
+    h3 {
+        margin-bottom: 30px;
+        @include media-991 {
+            margin-bottom: 20px;
+        }
+        @include media-575 {
+            margin-bottom: 15px;
+        }
+    }
+    p {
+        max-width: 360px;
+        margin: 0 auto 30px;
+        line-height: 1.4;
+        @include font-size(16);
+        color: $trinaryColor;
+        @include media-991 {
+            margin-bottom: 18px;
+        }
+        @include media-575 {
+            margin-bottom: 12px;
+        }
+    }
+    @include media-575 {
+        padding: 120px 0;
+    }
+}
+
+.flower-pattern {
+    font-size: 0;
+    @include media-max-1339 {
+        max-width:  420px;
+    }
+    @include media-1199 {
+        max-width:  370px;
+    }
+    @include media-991 {
+        max-width:  280px;
+    }
+    @include media-767 {
+        max-width:  200px;
+    }
+    @include media-575 {
+        max-width:  140px;
+    }
+}
+
+
+.secureText {
+    padding-top: 150px;
+    @include media-1199 {
+        padding-top: 100px;
+    }
+    @include media-991{
+        padding-top: 70px;
+    }
+    @include media-767 {
+        padding-top: 55px;
+    }
+    h2 {
+        max-width: 850px;
+        margin: 0 auto 35px
+    }
+}

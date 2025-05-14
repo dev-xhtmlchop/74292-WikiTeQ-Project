@@ -10,7 +10,7 @@
     img {
         width: 205px;
         @include media-1199 { 
-            width: 180px;
+            width: 170px;
         }
         @include media-767 { 
             width: 160px;
@@ -19,18 +19,23 @@
 }
 
 .main-menu {
+    > ul {
+        >li {
+            cursor: pointer;
+        }
+    }
     ul {
         @include font-size(18);
         gap: 24px;
         line-height: 1.33;
         font-weight: 500;
         @include media-max-1339 {
-            gap: 20px;
-            @include font-size(17);
+            gap: 15px;
+            @include font-size(16);
         }
         @include media-1199 {
             gap: 13px;
-            @include font-size(15);
+            @include font-size(13);
         }
         @include media-991 {
             @include font-size(17);
@@ -39,8 +44,19 @@
             @include font-size(16);
         }
         li {
+            position: relative;
+            padding: 4px 0;
+            
+            @include media-min-992 {
+                align-items: center;
+                gap: 5px;
+                display: flex;
+            }
+            @include media-max-1339 {
+                gap: 3px;
+            }
             @include media-991 {
-                padding: 4px 15px;
+                padding: 4px 24px;
             }
             @include media-767 {
                 padding: 3px 15px;
@@ -51,11 +67,82 @@
                     padding: 5px 0;
                 }
             }
+            &:hover {
+                .sub-menu{
+                    opacity: 1;
+                    visibility: visible;
+                    margin-top: 0;
+                    
+                }
+            }
+        }
+        .dropdown  {
+            background-image: url('../images/angle-icon.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 16px;
+            width: 16px;
+            display: inline-block;
+            transition: all .3s;
+            @include media-991 { 
+                position: absolute;
+                top: 9px;
+                right: 18px;
+                width: 30px;
+                height: 20px;
+                background-size: 18px auto;
+                &.active {
+                    transform: rotate(180deg); 
+                }
+            }
+        }
+        .sub-menu{
+                    
+                 
+            transition: all .4s;
+            li {
+                padding: 5px 0;
+                a {
+                    &:hover {
+                        color: $blue;
+                    }
+                }
+            }
+            @include media-min-992 {
+                opacity: 0;
+                visibility: hidden;
+                margin-top: -15px;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                top: 100%;
+                width: 200px;
+                padding: 10px 15px;    
+                background-color: $white;
+                @include border-radius(8px);   
+                box-shadow: 0px 5px 21px -6px rgba(0,0,0,0.30);
+                -webkit-box-shadow: 0px 5px 21px -6px rgba(0,0,0,0.30);
+                -moz-box-shadow: 0px 5px 21px -6px rgba(0,0,0,0.30);            
+                transition: all .4s;
+            }
+            @include media-991 {
+                transition: none;
+                display: none;
+                padding-left: 15px;
+            }
+           
         }
     }
 }
+
 .header-menus {
     gap: 32px;
+    @include media-min-992 {
+        display: flex !important;
+    }
+    @include media-max-1339 {
+        gap: 20px;
+    }
     @include media-1199 { 
         gap: 20px;
     }

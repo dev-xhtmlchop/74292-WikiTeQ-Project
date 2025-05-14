@@ -359,3 +359,90 @@ h6 {
 		padding-right: 15px;
 	}
 }
+
+
+
+
+.sky-bg{
+    @include skyBg;
+    color: $white;
+    h3 {
+        color: inherit;
+    }
+}
+
+
+
+
+.check-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    li {
+        position: relative;
+        padding-left: 32px;
+        &:before {
+            // content: '\f00c';
+            content: '';
+            background-image: url('../images/check.svg');
+            background-repeat: no-repeat;
+            background-position: top center;
+            position: absolute;
+            left: 4px;
+            top: 6px !important;
+            font-weight: bold;
+            font-family:'Font Awesome 6 Free';
+            font-size: 16px;
+            width: 14px;
+            height: 12px;
+        }
+    }
+    h5 {
+        color: $white;
+        line-height: normal;
+    }
+}
+
+
+
+.white-pattern{
+    background-color: transparent;
+    background-image: url('../images/white-pattern.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    padding: 220px 0;
+    margin-bottom: -110px;
+    z-index: 1;
+    @include border-radius(50px);
+    overflow: hidden;
+    @include media-1749  {
+        margin-bottom: -98px;
+    }
+    @include media-1699  {
+        margin-bottom: -84px;
+    }
+    @include media-1399  {
+        padding: 180px 0;
+    }
+    @include media-max-1339{
+        margin-bottom: -76px;
+    }
+    @include media-1199 {
+        padding: 150px 0;
+        margin-bottom: -62px;
+    }
+    @include media-991 {
+        padding: 100px 0;
+        @include border-radius(40px);
+        margin-bottom: -50px;
+    }
+    @include media-767 {
+        background-image: none;
+        margin: 0;
+        padding: 70px 0;
+    }
+    @include media-575 {
+        padding: 55px 0;
+    }
+}
