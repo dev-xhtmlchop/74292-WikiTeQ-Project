@@ -1,5 +1,23 @@
 @use "sass:math";
-
+@mixin menu-mob-shadow{
+  box-shadow: 0px 3px 10px -10px rgba(0,0,0,0.75);
+}
+@mixin skyBg {
+  background: #344BBD;
+  background: linear-gradient(to bottom, #344BBD, #7C8BDA);   
+}
+@mixin gradientpurple{
+  background-color: rgba(118, 135, 220, 0.3);
+  background: linear-gradient(180deg, rgba(118, 135, 220, 0.3) 0%, rgba(239, 242, 255, 0.3) 100%);
+}
+@mixin border-radius($radius) {
+  border-radius: $radius;
+}
+@mixin font-size($sizeValue) {
+  $remValue: math.div($sizeValue, 16);
+  font-size: #{$remValue}rem;
+}
+// BreakPoints 
 @mixin media-min-575 {
   @media screen and (min-width: 575px) {
     @content;
@@ -15,8 +33,6 @@
     @content;
   }
 }
-
-
 @mixin media-1749 {
   @media screen and (max-width: 1749px) {
     @content;
@@ -37,7 +53,6 @@
     @content; 
   }
 }
-
 @mixin media-1199 {
   @media screen and (max-width: 1199px) {
     @content;
@@ -63,51 +78,3 @@
     @content;
   }
 }
-
-
-@mixin menu-mob-shadow{
-  box-shadow: 0px 3px 10px -10px rgba(0,0,0,0.75);
-  -webkit-box-shadow: 0px 3px 10px -10px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 3px 10px -10px rgba(0,0,0,0.75);
-}
-@mixin skyBg {
-  background: #344BBD;
-  background: -webkit-linear-gradient(to bottom, #344BBD, #7C8BDA); 
-  background: -moz-linear-gradient(to bottom, #344BBD, #7C8BDA); 
-  background: -o-linear-gradient(to bottom, #344BBD, #7C8BDA);   
-  background: linear-gradient(to bottom, #344BBD, #7C8BDA);   
-}
-@mixin gradientpurple{
-  background-color: rgba(118, 135, 220, 0.3);
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(118, 135, 220, 0.3)), to(rgba(239, 242, 255, 0.3)));
-  background: -o-linear-gradient(top, rgba(118, 135, 220, 0.3) 0%, rgba(239, 242, 255, 0.3) 100%);
-  background: linear-gradient(180deg, rgba(118, 135, 220, 0.3) 0%, rgba(239, 242, 255, 0.3) 100%);
-}
-@mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-  -moz-border-radius: $radius;
-  border-radius: $radius;
-}
-
-
-
-@mixin font-size($sizeValue) {
-  $remValue: math.div($sizeValue, 16);
-  font-size: #{$remValue}rem;
-}
-
-/*Responsive Breakpoint END */
-
-
-/*
-@include media-min-768
-@include media-min-992
-@include media-1699
-@include media-1439
-@include media-1209
-@include media-991
-@include media-767
-@include media-575
-@include media-359
-*/
-

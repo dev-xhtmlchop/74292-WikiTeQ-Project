@@ -34,14 +34,16 @@
     });
 
     
+    let infiniteActivated = false;
+    let firstAutoplayDone = false;
     $('.variable-width').slick({
-      infinite: true,
+      infinite: false,
       slidesToShow: 1,
       slidesToScroll: 2,
       speed: 300,
       variableWidth: true,
       autoplay: true,
-      autoplaySpeed: 50000, 
+      autoplaySpeed: 5000,
       dots: true,
       responsive: [
         {
@@ -55,8 +57,43 @@
       ]
     });
 
-    updateDivPosition();
-    
+    $('.variable-width').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+      if (!infiniteActivated && !firstAutoplayDone) {
+        firstAutoplayDone = true;
+        setTimeout(() => {
+          activateInfinite(nextSlide);
+        }, 100); 
+      }
+    });
+
+    function activateInfinite(currentSlide) {
+      infiniteActivated = true;
+      $('.variable-width').slick('unslick');
+      $('.variable-width').slick({
+        infinite: true,
+        initialSlide: currentSlide,
+        slidesToShow: 1,
+        slidesToScroll: 2,
+        speed: 300,
+        variableWidth: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        dots: true,
+        responsive: [
+          {
+            breakpoint: 576,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              variableWidth: false,
+            }
+          }
+        ]
+      });
+    }
+
+
+    updateDivPosition();    
     $(window).on('resize' , function () {
       updateDivPosition();
     });

@@ -22,6 +22,10 @@
 .infrastructure-wrapper{
     padding-top: 63px;
     margin: 0 -15px 0 0;
+    h4 {
+        font-size: $fluid-title-h5;
+        line-height: 1;
+    }
     + .infrastructure-wrapper {
         margin-top: 65px;
         @include media-767 {
@@ -56,12 +60,12 @@
     @include media-767 {
         padding: 40px 25px ; 
     }
-    h5 {
+    h4 {
         color: inherit;
         font-weight: 600;
+
     }
     .number-text{
-        font-size: 374px;
         font-size: calc(200px + (400 - 200) * ((100vw - 320px) / (1920 - 320)));
         line-height: 0.75;
         font-weight: 300;
@@ -122,7 +126,7 @@
                 padding: 25px 20px;
                 min-height: initial;
             }
-			h5 {
+			h4 {
 				color: $white;
 				font-weight: 600;
 				margin-bottom: 66px;
@@ -136,15 +140,8 @@
 				flex-direction: column;
 				gap: 16px;
 				list-style: disc;
-                @include font-size(16);
+                font-size: $font-16-14;
 				color: $whiteLight;
-				@include media-991 {
-					@include font-size(15);
-				}
-				@include media-575 {
-					gap: 6px;
-					@include font-size(14);
-				}
                 li {
                     list-style: none;
                     padding-left: 18px;
@@ -165,7 +162,7 @@
 			&.bg-blue-light{
 				background-color: $lightBlue;
 				ul ,
-				h5 {
+				h4 {
 					color: $secondaryColor;
 				}
                 ul {

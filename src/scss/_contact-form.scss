@@ -14,6 +14,8 @@
     }
     .check-list {
         li {
+            font-size: $fluid-title-h5;
+	        line-height: 1;
             &:before {
                 background-image: url('../images/white-check.svg');
                 background-repeat: no-repeat;
@@ -95,6 +97,12 @@
     @include media-1199 {
         padding: 30px 0;
     }
+    h4 {
+        font-size: $fluid-title-h6;
+        line-height: 1.33;
+        color: $black;
+        font-weight: bold;
+    }
 }
 .form-group{
     font-size: 0;
@@ -105,7 +113,7 @@
         outline: none;
         box-shadow: none;
         @include border-radius(8px);
-        @include font-size(18);
+        font-size: $font-18-15;
         line-height: 1.33;
         font-weight: 500;
         color: $grayColor02;
@@ -115,7 +123,6 @@
         
         @include media-1199 {
             height: 50px;
-            @include font-size(16);
         }
         @include media-575 {
             padding: 0 15px;

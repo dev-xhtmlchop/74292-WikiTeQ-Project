@@ -38,11 +38,13 @@ h1 {
 	line-height: 1.10;
 	font-size: $fluid-title-h1;
 }
+.heading-h2 ,
 h2 {	
 	line-height: 1.15;
 	font-weight: 600;
 	font-size: $fluid-title-h2;
 }
+.heading-3 ,
 h3 {
 	font-size: $fluid-title-h3;
 	line-height: 1.10;
@@ -50,9 +52,9 @@ h3 {
 	color: $secondaryColor;
 }
 h4 {
-	font-size: $fluid-title-h4;
-	font-weight: 500;
-	line-height: 1.25;
+	font-size: $fluid-title-h5;
+	line-height: 1;
+	color: $secondaryColor;
 }
 h5 {
 	font-size: $fluid-title-h5;
@@ -63,6 +65,9 @@ h6 {
 	font-size: $fluid-title-h6;
 	line-height: 1.33;
 	color: $black;
+	font-weight: bold;
+}
+strong {
 	font-weight: bold;
 }
 .img-cover {
@@ -94,41 +99,25 @@ h6 {
 	color: $blue;
 }
 .flex-box {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
 	flex-wrap: wrap;
-	-ms-flex-wrap: wrap;
 }
 .horizontal-center {
-	-webkit-box-align: center;
-	-ms-flex-align: center;
 	align-items: center;
 }
 .horizontal-top{
-	-webkit-box-align: flex-start;
-	-ms-flex-align: flex-start;
 	align-items: flex-start;
 }
 .horizontal-bottom{
-	-webkit-box-align: flex-end;
-	-ms-flex-align: flex-end;
 	align-items: flex-end;
 }
 .vertical-between {
-	-webkit-box-pack: justify;
-	-ms-flex-pack: justify;
 	justify-content: space-between;
 }
 .vertical-center {
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
 	justify-content: center;
 }
 .column-content {
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-ms-flex-direction: column;
 	flex-direction: column;
 }
 .pos-absolute {
@@ -266,14 +255,11 @@ h6 {
 	.flex-half-lg {
 		flex: 0 0 50%;
 		width: 50%;
-		max-width: 50%;
-		
+		max-width: 50%;		
 		padding-left: 15px;
 		padding-right: 15px;
 	}
 	.flex-box-lg {
-		display: -webkit-box;
-		display: -ms-flexbox;
 		display: flex;
 	}
 	.lg-hide {
@@ -282,8 +268,7 @@ h6 {
 	.col-lg-third {
 		flex: 0 0 33.33%;
 		width: 33.33%;
-		max-width: 33.33%;
-		
+		max-width: 33.33%;		
 		padding-left: 15px;
 		padding-right: 15px;
 	}
@@ -311,7 +296,6 @@ h6 {
         position: relative;
         padding-left: 32px;
         &:before {
-            // content: '\f00c';
             content: '';
             background-image: url('../images/check.svg');
             background-repeat: no-repeat;
@@ -321,7 +305,7 @@ h6 {
             top: 6px !important;
             font-weight: bold;
             font-family:'Font Awesome 6 Free';
-            font-size: 16px;
+             @include font-size(16);
             width: 14px;
             height: 12px;
         }

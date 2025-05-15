@@ -1,4 +1,5 @@
 .management-section {
+    .heading-3 ,
     h3 {
         margin-bottom: 30px;
         @include media-991 {
@@ -8,7 +9,7 @@
             margin-bottom: 15px;
         }
     }
-    p {
+    p:not(.heading-3) {
         max-width: 360px;
         margin: 0 auto 30px;
         line-height: 1.4;
@@ -19,6 +20,13 @@
         }
         @include media-575 {
             margin-bottom: 12px;
+        }
+    }
+    .heading-h2 {
+        max-width: 850px;
+        margin: 0 auto 35px;
+        @include media-767 {
+            margin-bottom: 22px;
         }
     }
     @include media-575 {

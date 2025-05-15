@@ -11,12 +11,11 @@
         @include border-radius(12px);
     }
     position: relative;
-    z-index: 1;
-    
+    z-index: 1;    
     img {
         @include border-radius(20px);
         @include media-575 {
-            @include border-radius(12px);
+            @include border-radius(16px);
         }
     }
     &:before{
@@ -31,8 +30,7 @@
         @include border-radius(20px);
         @include media-767 {
            display: none;
-        }
-        
+        }        
     }
     &.right-no-radius{
         @include media-min-768 {
@@ -42,27 +40,49 @@
                 border-bottom-right-radius: 0;
                 border-top-right-radius: 0;
             }
-        }
-        
-        
+        }   
     }
 }
 .flexible-solution-wrapper{
     gap: 65px;
+    overflow: hidden;
+    @include gradientpurple;    
+    @include border-radius(20px);
     @include media-1199 {
         gap: 50px;
     }
-    @include gradientpurple;
-    overflow: hidden;
-    @include border-radius(20px);
     @include media-767 {
         @include border-radius(20px);
         padding-bottom: 35px;
+        gap: 40px;
     }
     @include media-575 {
         @include border-radius(16px);
     }
     .flexible-solution-row{
+        position: relative;
+        padding: 20px 0;
+        align-items: initial;
+        @include media-1199 {
+            min-height: 440px;            
+        }
+        @include media-767 { 
+            padding: 0;
+        }
+        &:after  ,
+        &:before {
+            width: 20px;
+            height: 21px;
+            background-position: top right;
+            background-size: contain;
+            content: "";
+            position: absolute;
+            @include media-767 {
+                display: none;
+            }
+        }
+        &:first-child {padding-top: 0;}
+        &:last-child {padding-bottom: 0;}
         &:nth-child(even) {
             .flexible-image{
                 &:before{
@@ -70,8 +90,47 @@
                     border-top-left-radius: 0;
                 }
             }
+            &:before , &:after  {
+                right: 0;
+                background-image: url(../images/white-curve-02.png);            
+            }
+            &:before {    
+                top: -65px;
+                background-position: top left;
+                @include media-1199 {
+                    top: -50px;
+                }
+            }
+            &:after {          
+                bottom: -67px;
+                transform: rotate(90deg);
+                @include media-1199 {
+                    bottom: -52px;
+                }
+            }
+        }
+        &:nth-child(odd) {
+            &:before , &:after  {
+                left: 0;
+                background-image: url(../images/white-curve.png);
+            }
+            &:before {     
+                bottom: -65px;
+                @include media-1199 {
+                    bottom: -50px;
+                }
+            }
+            &:after {          
+                top: -67px;
+                transform: rotate(90deg);
+                @include media-1199 {
+                    top: -52px;
+                }
+            }
         }
         .flexible-solution-text{
+            display: flex;
+            align-items: center;
             ul {
                 margin: 0;
                 li {
@@ -122,7 +181,7 @@
         &:last-child {
             .flexible-solution-image {
                 .flexible-image:after {
-                    @include media-1199 {
+                    @include media-767 {
                         display: none;
                     }
                     content: '';
@@ -151,7 +210,6 @@
         }
     }
 }
-
 .flex-sol-item{
     width: 47%;
     @include media-991 {
@@ -161,16 +219,16 @@
         width: 100%;
     }
 }
-
 .flexible-solution-text{
-    padding: 35px 50px;
+    padding: 15px 50px;
     @include media-max-1339 {
-        padding: 30px 30px;
+        padding: 15px 30px;
     }
     @include media-991 {
-        padding: 25px 15px;
+        padding: 10px 15px;
     }
     @include media-767 { 
+        padding-top: 25px;
         padding-bottom: 0;
     }
 }

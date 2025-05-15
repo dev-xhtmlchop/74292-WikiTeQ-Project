@@ -17,7 +17,6 @@
         }
     }
 }
-
 .main-menu {
     > ul {
         >li {
@@ -71,8 +70,7 @@
                 .sub-menu{
                     opacity: 1;
                     visibility: visible;
-                    margin-top: 0;
-                    
+                    margin-top: 0;                    
                 }
             }
         }
@@ -96,9 +94,7 @@
                 }
             }
         }
-        .sub-menu{
-                    
-                 
+        .sub-menu{                                     
             transition: all .4s;
             li {
                 padding: 5px 0;
@@ -129,12 +125,10 @@
                 transition: none;
                 display: none;
                 padding-left: 15px;
-            }
-           
+            }           
         }
     }
 }
-
 .header-menus {
     gap: 32px;
     @include media-min-992 {
@@ -153,11 +147,10 @@
         top: 100%;
         width: 100%;
         background-color: $white;padding-bottom: 20px;
+        @include menu-mob-shadow;
         .cust-btn {
             margin-left: 15px;margin-top: 5px
-        }
-        @include menu-mob-shadow;
-
+        }        
     }
 }
 #hamburger {

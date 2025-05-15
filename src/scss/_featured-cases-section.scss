@@ -41,25 +41,24 @@
         margin-right: 0;
         max-width: 100%;
     }
-    h5 {
+    h4 {
         color: inherit;
         font-weight: 600;
         margin-bottom: 10px;;
     }
     ul {
         margin-left: 18px;
-        @include font-size(18);
+        font-size: $font-18-14;
         display: flex;
         flex-direction: column;
         gap: 14px;
         max-width: 80%;
         list-style: disc;
-        @include media-991 {
-            @include font-size(16);
-        }
         @include media-575 {
             gap: 6px;
-            @include font-size(14);
+        }
+        li {
+            list-style: disc;
         }
     }
     .case-link{
@@ -119,7 +118,7 @@
     p{
         color: $trinaryColor;
     }
-    h5 {
+    h4 {
         font-weight: 600;
         margin-bottom: 18px;
     }
@@ -128,19 +127,10 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
-        list-style: disc;
-        @include media-991 {
-            @include font-size(15);
-        }
-        @include media-575 {
-            gap: 6px;
-            @include font-size(14);
-        }
+        font-size: $font-16-14;
+        
     }
 }
-
-
-
 .slick-list {
     @include media-min-768{
         overflow: initial !important;

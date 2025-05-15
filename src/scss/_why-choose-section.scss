@@ -67,6 +67,7 @@
             height: 70px;
         }
     }
+    h4 ,
     h5 {
         color: inherit;
         margin-bottom: 12px
@@ -75,10 +76,7 @@
         color: inherit;
         font-weight: 400;
         margin: 0;
-        @include font-size(18); 
-        @include media-991 {
-            @include font-size(16); 
-        }
+        font-size: $font-18-15;
     }
 
 }

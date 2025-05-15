@@ -1,13 +1,12 @@
 .top-footer {
     padding: 165px 0 40px;
     color: $white;
-    @include font-size(16);
+    font-size: $font-16-14;
     font-weight: 500;
     line-height: 1.38;
     p{
         margin: 0;
-    }
-    
+    }    
     .flex-row {
         row-gap: 25px ;
     }
@@ -19,17 +18,14 @@
         }
     }
     @include media-767 {
-        @include font-size(14);
         padding: 40px 0 25px;
     }
     @include media-575 {
         text-align: center;
-    }
-    
+    }    
 }
 .btm-footer {
-    padding: 15px 0;
-    
+    padding: 15px 0;    
     ul {
         @include font-size(14);
         li {
@@ -41,12 +37,11 @@
         }
     }
 }
-
 .footer-left{
     max-width: 394px;
     width: 100%;
     p{
-        color:$whiteLight ;
+        color:$whiteLight;
     }
     @include media-767 {
         margin: 0 auto;
@@ -57,15 +52,13 @@
     @include media-767 {
         gap: 15px;
     }
+    p ,
     h6 {
         text-transform: uppercase;
         color: $lightBlue02;
         line-height: 1.48;
-        @include font-size(16);
+        font-size: $font-16-14 ;
         margin: 0;
-        @include media-767 {
-            @include font-size(14);
-        }
     }
     ul {
         gap: 20px;
@@ -98,30 +91,17 @@
         width: 100%;
     }
     li {
-        font-size: 40px;
+        font-size: clamp(17px, 2.083vw + 10.33px, 40px);;
         font-weight: 400;
         line-height: 1;
-        @include media-max-1339 {
-            font-size: 36px;
-        }
-        @include media-1199 {
-            font-size: 32px;
-        }
-        @include media-991 {
-            font-size: 24px;
-        }
-        @include media-767 {
-            font-size: 20px;
-        }
         @include media-575 {
             width: 100%;
-            font-size: 18px;
             text-align: center;
         }
     }
 }
 .social-icons {
-    font-size: 21px;
+    @include font-size(21);
     gap: 25px;
     color: $lightBlue03;
     @include media-575 {
