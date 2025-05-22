@@ -32,7 +32,6 @@
         $clickedDropdown.toggleClass('active');
       }
     });
-
     
     let infiniteActivated = false;
     let firstAutoplayDone = false;

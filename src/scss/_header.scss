@@ -4,6 +4,13 @@
     position: sticky;
     top: 0;
     background-color: $white;
+    position: relative;
+    .container-fluid {
+        display: flex;
+	    flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
 }
 .logo {
     font-size: 0;
@@ -19,6 +26,9 @@
 }
 .main-menu {
     > ul {
+        @include media-min-992 {
+            display: flex;
+        }
         >li {
             cursor: pointer;
         }
@@ -131,6 +141,7 @@
 }
 .header-menus {
     gap: 32px;
+    align-items: center;
     @include media-min-992 {
         display: flex !important;
     }
@@ -165,6 +176,9 @@
     border: none;
     box-shadow: none;
     outline: none;
+    @include media-min-992 {
+        display: none;
+    }
     @media (max-width: 767px) {
         width: 36px;
     }
@@ -189,16 +203,16 @@
       }
     }  
     &.open{
-      span{
-        &:nth-child(1) {
-          top: 10px;
-          transform: rotate(130deg);
+        span{
+            &:nth-child(1) {
+                top: 10px;
+                transform: rotate(130deg);
+            }
+            &:nth-child(3) {
+                top: 10px;
+                transform: rotate(-130deg);
+            }
+            &:nth-child(2){opacity: 0}
         }
-        &:nth-child(3) {
-          top: 10px;
-          transform: rotate(-130deg);
-        }
-        &:nth-child(2){opacity: 0}
-      }
     }    
 }

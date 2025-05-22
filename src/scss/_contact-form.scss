@@ -9,6 +9,23 @@
 		padding: 45px 0;
         @include border-radius(12px);
 	}
+    .contact-row{
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -15px;
+        margin-right: -15px;
+        > div {
+            padding: 0 15px;
+            flex: 0 0 50%;
+            width: 50%;
+            max-width: 50%;
+            @include media-767 {
+                flex: 0 0 100%;
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+    }
     .flex-row{
         row-gap: 40px;
     }
@@ -25,8 +42,7 @@
     }
 }
 .contact-btm {
-    gap: 10px;
-    
+    gap: 10px;    
 }
 .contact-form {
     background-image: url('../images/form-bg.svg');
@@ -51,16 +67,29 @@
     form {
         background-color: $white;
         gap: 14px;
+        display: flex;
+	    flex-wrap: wrap;
+        flex-direction: column;
         @include media-1199 { 
             gap: 10px;
         }
     }
 }
-
 .contact-left {
     gap: 30px;
     color: $white;
     max-width: 540px;
+    height: 100%;
+    flex: 0 0 100%;
+	width: 100%;
+	max-width: 100%;
+    display: flex;
+	flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    @include media-1199 {
+        padding: 0;
+    }
     @include media-767 {
         max-width: 100%;
     }
@@ -70,26 +99,34 @@
             color : $whiteLight;
             @include font-size(18);
         }
-        h3 {
+        .heading-3 {
             margin-bottom: 25px;
             color: $white;
         }
     }
     .contact-btm {
         border-top: 1px solid $white;
-        padding-top: 12px;@include font-size(16);
+        padding-top: 12px;
+        display: flex;
+	    flex-wrap: wrap;
+        justify-content: space-between;
+        @include font-size(16);
         @include media-1199 {
             @include font-size(14);
+        }
+        @include media-991 {
+            @include font-size(13);
         }
         p {
             font-weight: 400;
         }
     }
 }
-
-
 .contact-right{
     padding-left: 50px;
+    @include media-767 {
+        padding-top: 20px !important;
+    }
 }
 .form-head{
     padding: 40px 0 60px;

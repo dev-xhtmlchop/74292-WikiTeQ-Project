@@ -1,6 +1,9 @@
 .infrastructure-head {
     margin-bottom: 60px;
     gap: 20px;
+    display: flex;
+	flex-wrap: wrap;
+    justify-content: space-between;
     @include media-991 {
         margin-bottom: 30px;
     }
@@ -15,13 +18,15 @@
             strong {
                 font-weight: 600;
             }
-        }
-        
+        }        
     }
 }
 .infrastructure-wrapper{
     padding-top: 63px;
     margin: 0 -15px 0 0;
+    display: flex;
+	flex-wrap: wrap;
+    .heading-4 , 
     h4 {
         font-size: $fluid-title-h5;
         line-height: 1;
@@ -38,6 +43,10 @@
 }
 .infrastructure-lightBlue {
     .infrastructure-left {
+        display: flex;
+	    flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-between;
         color: $secondaryColor;
         background-image: url('../images/light-blue-bg.svg');
         .number-text{
@@ -58,12 +67,12 @@
     padding-bottom: 0;
     color: $white;
     @include media-767 {
-        padding: 40px 25px ; 
+        padding: 40px 25px; 
     }
+    .heading-4 , 
     h4 {
         color: inherit;
         font-weight: 600;
-
     }
     .number-text{
         font-size: calc(200px + (400 - 200) * ((100vw - 320px) / (1920 - 320)));
@@ -96,24 +105,41 @@
 	}
 	.infrastructure-right {
 		width: 58%;
+        display: flex;
+	    flex-wrap: wrap;
 		padding-left: 20px;
         @include media-1199 {
             width: 100%;
             padding: 25px 0 0;
         }        
-		.flex-row {
+		.infrastructure-row {
 			margin: 0 -10px;
             flex: 1;
+            display: flex;
+	        flex-wrap: wrap;
             @include media-767 {
                 row-gap: 20px;
             }
 			> div {
 				padding: 0 10px;
+                flex: 0 0 50%;
+                width: 50%;
+                max-width: 50%;
+                @include media-575 {
+                    flex: 0 0 100%;
+                    width: 100%;
+                    max-width: 100%;
+                }
 			}
 		}		
 		.infrastructureBox{
 			padding: 24px 32px;
 			min-height: 330px;
+            height: 100%;
+            display: flex;
+	        flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: space-between;
             @include border-radius(20px);
             @include media-max-1339 {
                 padding: 15px 25px;
@@ -126,6 +152,7 @@
                 padding: 25px 20px;
                 min-height: initial;
             }
+            .heading-4 ,
 			h4 {
 				color: $white;
 				font-weight: 600;
@@ -161,8 +188,7 @@
 			}
 			&.bg-blue-light{
 				background-color: $lightBlue;
-				ul ,
-				h4 {
+				ul , h4 ,.heading-4 {
 					color: $secondaryColor;
 				}
                 ul {

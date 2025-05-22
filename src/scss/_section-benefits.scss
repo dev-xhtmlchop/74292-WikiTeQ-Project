@@ -7,7 +7,6 @@
     @include media-575 {   
         padding: 45px 0;
     }
-
     h2 {
         margin-bottom: 60px;
         font-size: $fluid-title-h3;
@@ -21,10 +20,11 @@
         }
     }
 }
-
 .benefits-row{
     row-gap: 30px;
     margin: 0 -20px;
+    display: flex;
+	flex-wrap: wrap;
     @include media-1199 {
         margin: 0 -13px;
     }
@@ -34,16 +34,32 @@
     }
     > div {
         padding: 0 20px;
+        flex: 0 0 33.33%;
+		width: 33.33%;
+		max-width: 33.33%;	
         @include media-1199 {
             padding: 0 13px;
         }
+        @include media-991 {
+            flex: 0 0 50%;
+            width: 50%;
+            max-width: 50%;
+        }
         @include media-767 {  
             padding: 0 10px;
+        }
+        @include media-575 {
+            flex: 0 0 100%;
+            width: 100%;
+            max-width: 100%;
         }
     }
 }
 .benefits-icons{
     background-color: $blue;
+    position: absolute;
+    top: 0;
+    right: 0;
     @include border-radius(10px);
     width: 82px;
     height: 82px;
@@ -55,15 +71,14 @@
         width: 72px;
         height: 72px;
     }
-    @include media-449 {
-       
-    }
 }
 .benefits-item{
     background-image: url(../images/whit-box.svg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: right top;
+    position: relative;
+    height: 100%;
     @include border-radius(10px);
     overflow: hidden;
     padding: 40px 25px 25px;

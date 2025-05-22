@@ -4,8 +4,7 @@
     overflow: hidden;
     aspect-ratio: 2/1;
     width: 100%;
-   
-    
+    position: relative;    
     @include media-991  {
         min-height: 420px;
     }
@@ -17,6 +16,7 @@
     .hero-sec-inside{
         width: 100%;
         height: 100%;
+        position: relative;
         &:before {
             content: '';
             position: absolute;
@@ -40,6 +40,8 @@
         z-index: 1;
         color: $white;
         height: auto;
+        position: absolute;
+        width: 100%;
         @include media-1199  {
             top: 25px;
         }
@@ -59,8 +61,11 @@
         }
     }
     .herotext-btm {
-        bottom: 50px;z-index: 1;
+        bottom: 50px;
+        z-index: 1;
         height: auto;
+        position: absolute;
+        width: 100%;
         @include media-1199  {
             bottom: 25px;
         }
@@ -78,19 +83,23 @@
                 max-width: 300px;
             }
         }
-    }
-    
+    }    
 }
-
 .hero-right-box {
     width: 550px;
+    z-index: 3;
     height: 312px;
     background-image: url('../images/hero-side-pattern.png');
     padding-left: 75px;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: bottom right;
-    
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+	flex-wrap: wrap;
+    align-items: flex-end;
     @include media-max-1339{
         width: 515px;
         height: 290px;
@@ -103,7 +112,7 @@
     @include media-991{
         width: 375px;
         height: 230px;
-        padding-left: 50px;
+        padding-left: 35px;
     }
     @include media-767{
         position: relative;
@@ -145,16 +154,18 @@
         padding-bottom: 40px;
         @include media-1199{
             padding-bottom: 25px;
-            max-width: 240px;
+            
         }
         @include media-991{
             padding-bottom: 20px;
-            max-width: 220px;
-            .cust-btn {
-                padding: 0 15px;
-            }
+            max-width: 260px;
+        }        
+        @include media-767{ 
+            max-width: 230px;
         }
-        
+        @include media-575{ 
+            max-width: 200px;
+        }
         p {
             margin-bottom: 26px;
             line-height: 1.25;
@@ -169,7 +180,6 @@
         }
     }
 }
-
 @supports (image-rendering: -webkit-optimize-contrast) {
     .hero-right-box {
       background-image: url('../images/hero-side-pattern.webp');

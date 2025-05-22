@@ -1,8 +1,7 @@
-
-
 .we-solve-section {
+    position: relative;
     padding: 65px 0 0;
-    h3 {
+    .heading-3 {
         margin-bottom: 240px ;
         color: $white;
         @include media-1199 {
@@ -19,6 +18,10 @@
         height: calc(100% - 120px);
         @include border-radius(20px);
         overflow: hidden;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
         img {
             object-position: top center;
         }
@@ -29,13 +32,30 @@
 	@include media-767   {
 		padding-top: 40px;
 	}
+    .container {
+        position: relative;
+    }
 }
-
 .solve-wrapper {
+    display: flex;
+	flex-wrap: wrap;
     margin: 0 -10px;
     row-gap: 20px;
-    > div {
+    > .solve-items {
         padding: 0 10px;
+        flex: 0 0 25%;
+		width: 25%;
+		max-width: 25%;
+        @include media-991 {
+            flex: 0 0 50%;
+            width: 50%;
+            max-width: 50%;
+        }
+         @include media-575 {
+            flex: 0 0 100%;
+            width: 100%;
+            max-width: 100%;
+        }
     }
     .solve-list {
         background-color: $white;
@@ -65,6 +85,7 @@
                 margin-bottom: 25px;
             }
         }
+        .heading-4 ,
         h4 {
             margin-bottom: 15px;
             @include media-575 {
