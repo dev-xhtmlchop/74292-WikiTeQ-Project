@@ -42,7 +42,7 @@
       speed: 300,
       variableWidth: true,
       autoplay: true,
-      autoplaySpeed: 5000,
+      autoplaySpeed: 6000,
       dots: true,
       responsive: [
         {
@@ -76,7 +76,7 @@
         speed: 300,
         variableWidth: true,
         autoplay: true,
-        autoplaySpeed: 5000,
+        autoplaySpeed: 6000,
         dots: true,
         responsive: [
           {

@@ -1,5 +1,6 @@
  .management-section {
     position: relative;
+    padding-top: 148px;
     .container {
         text-align: center;
     }
@@ -35,6 +36,7 @@
     @include media-575 {
         padding: 120px 0;
     }
+    
 }
 .secure-text {
     padding-top: 150px;

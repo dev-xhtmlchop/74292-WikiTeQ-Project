@@ -144,13 +144,13 @@ h3 {
 
 .heading-4,
 h4 {
-  font-size: clamp(17px, 1.4vw, 24px);
+  font-size: clamp(17px, 1.67vw, 24px);
   line-height: 1;
   color: #000316;
 }
 
 h5 {
-  font-size: clamp(17px, 1.4vw, 24px);
+  font-size: clamp(17px, 1.67vw, 24px);
   line-height: 1;
   color: #000316;
 }
@@ -1126,6 +1126,7 @@ strong {
 }
 .management-section {
   position: relative;
+  padding-top: 148px;
 }
 .management-section .container {
   text-align: center;
@@ -1175,25 +1176,25 @@ strong {
   }
 }
 
-.secureText {
+.secure-text {
   padding-top: 150px;
 }
 @media screen and (max-width: 1199px) {
-  .secureText {
+  .secure-text {
     padding-top: 100px;
   }
 }
 @media screen and (max-width: 991px) {
-  .secureText {
+  .secure-text {
     padding-top: 70px;
   }
 }
 @media screen and (max-width: 767px) {
-  .secureText {
+  .secure-text {
     padding: 55px 0;
   }
 }
-.secureText h2 {
+.secure-text h2 {
   max-width: 850px;
   margin: 0 auto 35px;
 }
@@ -1388,7 +1389,7 @@ strong {
 }
 .benefits-item h3 {
   margin-bottom: 15px;
-  font-size: clamp(17px, 1.4vw, 24px);
+  font-size: clamp(17px, 1.67vw, 24px);
   line-height: 1;
 }
 @media screen and (max-width: 767px) {
@@ -1445,7 +1446,7 @@ strong {
 }
 .infrastructure-wrapper .heading-4,
 .infrastructure-wrapper h4 {
-  font-size: clamp(17px, 1.4vw, 24px);
+  font-size: clamp(17px, 1.67vw, 24px);
   line-height: 1;
 }
 .infrastructure-wrapper + .infrastructure-wrapper {
@@ -1462,7 +1463,7 @@ strong {
   }
 }
 
-.infrastructure-lightBlue .infrastructure-left {
+.infrastructure-light-blue .infrastructure-left {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -1470,7 +1471,7 @@ strong {
   color: #000316;
   background-image: url("../images/light-blue-bg.svg");
 }
-.infrastructure-lightBlue .infrastructure-left .number-text {
+.infrastructure-light-blue .infrastructure-left .number-text {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1568,7 +1569,7 @@ strong {
     max-width: 100%;
   }
 }
-.infrastructure-wrapper .infrastructure-right .infrastructureBox {
+.infrastructure-wrapper .infrastructure-right .infrastructure-box {
   padding: 24px 32px;
   min-height: 330px;
   height: 100%;
@@ -1579,35 +1580,35 @@ strong {
   border-radius: 20px;
 }
 @media screen and (max-width: 1339px) {
-  .infrastructure-wrapper .infrastructure-right .infrastructureBox {
+  .infrastructure-wrapper .infrastructure-right .infrastructure-box {
     padding: 15px 25px;
     min-height: 290px;
   }
 }
 @media screen and (max-width: 1199px) {
-  .infrastructure-wrapper .infrastructure-right .infrastructureBox {
+  .infrastructure-wrapper .infrastructure-right .infrastructure-box {
     padding: 24px 32px;
   }
 }
 @media screen and (max-width: 767px) {
-  .infrastructure-wrapper .infrastructure-right .infrastructureBox {
+  .infrastructure-wrapper .infrastructure-right .infrastructure-box {
     padding: 25px 20px;
     min-height: initial;
   }
 }
-.infrastructure-wrapper .infrastructure-right .infrastructureBox .heading-4,
-.infrastructure-wrapper .infrastructure-right .infrastructureBox h4 {
+.infrastructure-wrapper .infrastructure-right .infrastructure-box .heading-4,
+.infrastructure-wrapper .infrastructure-right .infrastructure-box h4 {
   color: #fff;
   font-weight: 600;
   margin-bottom: 66px;
 }
 @media screen and (max-width: 1339px) {
-  .infrastructure-wrapper .infrastructure-right .infrastructureBox .heading-4,
-  .infrastructure-wrapper .infrastructure-right .infrastructureBox h4 {
+  .infrastructure-wrapper .infrastructure-right .infrastructure-box .heading-4,
+  .infrastructure-wrapper .infrastructure-right .infrastructure-box h4 {
     margin-bottom: 30px;
   }
 }
-.infrastructure-wrapper .infrastructure-right .infrastructureBox ul {
+.infrastructure-wrapper .infrastructure-right .infrastructure-box ul {
   margin-left: 0;
   display: flex;
   flex-direction: column;
@@ -1616,12 +1617,12 @@ strong {
   font-size: clamp(14px, 0.278vw + 13.11px, 16px);
   color: rgba(255, 255, 255, 0.7);
 }
-.infrastructure-wrapper .infrastructure-right .infrastructureBox ul li {
+.infrastructure-wrapper .infrastructure-right .infrastructure-box ul li {
   list-style: none;
   padding-left: 18px;
   position: relative;
 }
-.infrastructure-wrapper .infrastructure-right .infrastructureBox ul li:before {
+.infrastructure-wrapper .infrastructure-right .infrastructure-box ul li:before {
   content: "";
   position: absolute;
   left: 0;
@@ -1632,13 +1633,13 @@ strong {
   opacity: 0.7;
   background-color: #fff;
 }
-.infrastructure-wrapper .infrastructure-right .infrastructureBox.bg-blue-light {
+.infrastructure-wrapper .infrastructure-right .infrastructure-box.bg-blue-light {
   background-color: rgba(149, 164, 244, 0.3);
 }
-.infrastructure-wrapper .infrastructure-right .infrastructureBox.bg-blue-light ul, .infrastructure-wrapper .infrastructure-right .infrastructureBox.bg-blue-light h4, .infrastructure-wrapper .infrastructure-right .infrastructureBox.bg-blue-light .heading-4 {
+.infrastructure-wrapper .infrastructure-right .infrastructure-box.bg-blue-light ul, .infrastructure-wrapper .infrastructure-right .infrastructure-box.bg-blue-light h4, .infrastructure-wrapper .infrastructure-right .infrastructure-box.bg-blue-light .heading-4 {
   color: #000316;
 }
-.infrastructure-wrapper .infrastructure-right .infrastructureBox.bg-blue-light ul li:before {
+.infrastructure-wrapper .infrastructure-right .infrastructure-box.bg-blue-light ul li:before {
   background-color: rgba(149, 164, 244, 0.6);
   opacity: 1;
 }
@@ -2027,7 +2028,7 @@ strong {
   }
 }
 .flexible-solution-wrapper .flexible-solution-row:first-child .flexible-solution-image .flexible-image:after {
-  right: calc(100% + 20px);
+  right: calc(100% + 19px);
   left: auto;
   top: 0;
   bottom: auto;
@@ -2570,7 +2571,7 @@ strong {
   row-gap: 40px;
 }
 .contact-section .check-list li {
-  font-size: clamp(17px, 1.4vw, 24px);
+  font-size: clamp(17px, 1.67vw, 24px);
   line-height: 1;
 }
 .contact-section .check-list li:before {
