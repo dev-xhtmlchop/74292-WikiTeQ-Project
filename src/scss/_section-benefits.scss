@@ -1,0 +1,121 @@
+.section-benefits {
+    padding: 90px 0 80px;
+    h2 {
+        font-size: $fluid-title-h3;
+        font-weight: 600;
+        line-height: 1.10;
+        margin-bottom: 60px;
+        @include media-991 {
+            margin-bottom: 45px;
+        }
+        @include media-767 {
+            margin-bottom: 30px;
+        }
+    }
+    @include border-radius(20px);
+    @include media-767 {   
+        padding: 60px 0;
+    }
+    @include media-575 {   
+        padding: 45px 0;
+    }
+}
+.benefits-row{
+    display: flex;
+	flex-wrap: wrap;
+    margin: 0 -20px;
+    row-gap: 30px;
+    > div {
+        flex: 0 0 33.33%;
+		max-width: 33.33%;
+        padding: 0 20px;
+		width: 33.33%;	
+        @include media-1199 {
+            padding: 0 13px;
+        }
+        @include media-991 {
+            flex: 0 0 50%;
+            max-width: 50%;
+            width: 50%;
+        }
+        @include media-767 {  
+            padding: 0 10px;
+        }
+        @include media-575 {
+            flex: 0 0 100%;
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+    @include media-1199 {
+        margin: 0 -13px;
+    }
+    @include media-767 {  
+        margin: 0 -10px;
+        row-gap: 20px;
+    }
+}
+.benefits-icons{
+    align-items: center;
+    background-color: $blue;
+    display: flex;
+    height: 82px;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 82px;
+    img {max-width: 60%;}
+    @include border-radius(10px);
+    @include media-449 {
+        height: 72px;
+        width: 72px;
+    }
+}
+.benefits-item{
+    background-image: url(../images/whit-box.svg);
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: $primaryColor;
+    height: 100%;
+    overflow: hidden;
+    padding: 40px 25px 25px;
+    position: relative;
+    .count-num {
+        color: $grayColor;
+        display: block;
+        font-weight: 500;
+        margin-bottom: 50px;
+        @include font-size(18);
+        @include media-767 { 
+            margin-bottom: 42px;
+        }
+    }
+    h3 {
+        font-size: $fluid-title-h5;
+	    line-height: 1;
+        margin-bottom: 15px;
+        @include media-767 {  
+            margin-bottom: 10px;
+        }
+    }
+    p{
+        font-size: clamp(13px, 0.694vw + 10.78px, 14px);
+    }
+    @include border-radius(10px);
+    @include media-1199 { 
+        padding: 35px 15px 15px;
+    }
+    @include media-575 { 
+        min-height: 230px;
+    }
+}
+.benefits-bg{
+    aspect-ratio: 1/0.5;
+    margin-top: 12px;
+    max-height: 400px;    
+    overflow: hidden;
+    width: 100%;
+    @include border-radius(20px);
+}

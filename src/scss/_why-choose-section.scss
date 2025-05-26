@@ -1,0 +1,95 @@
+.why-choose-section {
+    background-image: url(../images/why-choose-bg.jpg);
+    background-position: center bottom;
+    background-size: cover;
+    margin: 12px 0;
+    padding: 65px 0;
+    .heading-3 {
+        color: $white;
+        @include media-575  {
+            text-align: center;
+        }   
+    }
+    @include border-radius(20px);
+    @include media-991  {
+		padding: 50px 0;
+	}
+	@include media-767   {
+		padding: 40px 0;
+        @include border-radius(12px);
+	}
+} 
+.why-choose-row{
+    display: flex;
+	flex-wrap: wrap;
+	margin-left: -15px;
+	margin-right: -15px;
+    margin-top: 75px;
+    max-width: 670px;
+    row-gap: 80px;
+    .choose-item-box{
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding-left: 15px;
+	    padding-right: 15px;
+        width: 50%;
+    }
+	@include media-991  {
+		margin-top: 60px;
+        row-gap: 60px;
+	}
+	@include media-767   {
+		margin-top: 45px;
+        row-gap: 45px;
+	}
+	@include media-575  {
+		margin-top: 30px;
+        row-gap: 30px;
+	}
+}
+.choose-item {
+    color: $white;
+    max-width: 300px;
+    width: 100%;    
+    .choose-icons {
+        align-items: center;
+        display: flex;
+	    flex-wrap: wrap;
+        font-size: 0;
+        height: 82px;
+        justify-content: center;
+        margin-bottom: 30px;
+        width: 82px;
+        @include gradientpurple;
+        @include border-radius(16px);
+        @include media-991 { 
+            margin-bottom: 20px;
+        }
+        @include media-767 { 
+            margin-bottom: 15px;
+        }
+        @include media-575  {
+            height: 70px;
+            margin: 0 auto 15px;
+            width: 70px;
+        }
+    }
+    .heading-4 {
+        color: inherit;
+        margin-bottom: 12px;
+    }
+    p {
+        color: inherit;
+        font-size: $font-18-15;
+        font-weight: 400;
+        margin: 0;
+    }
+    @include media-575 { 
+        text-align: center;
+    }
+}
+@supports (image-rendering: -webkit-optimize-contrast) {
+    .why-choose-section {
+        background-image: url('../images/why-choose-bg.webp');
+    }
+}

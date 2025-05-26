@@ -1,0 +1,116 @@
+.we-solve-section {
+    padding: 65px 0 0;
+    position: relative;
+    .heading-3 {
+        color: $white;
+        margin-bottom: 240px ;
+        @include media-1199 {
+            margin-bottom: 180px;
+        }
+        @include media-991 {
+            margin-bottom: 80px;
+        }
+        @include media-767  {
+            margin-bottom: 40px;
+        }
+    }
+    .we-solve-bg{
+        height: calc(100% - 120px);
+        left: 0;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        img {
+            object-position: top center;
+        }
+        @include border-radius(20px);
+    }
+    .container {
+        position: relative;
+    }
+    @include media-991  {
+		padding-top: 50px;
+	}
+	@include media-767   {
+		padding-top: 40px;
+	}
+}
+.solve-wrapper {
+    display: flex;
+	flex-wrap: wrap;
+    margin: 0 -10px;
+    row-gap: 20px;
+    > .solve-items {
+        flex: 0 0 25%;
+		max-width: 25%;
+        padding: 0 10px;
+		width: 25%;
+        @include media-991 {
+            flex: 0 0 50%;
+            max-width: 50%;
+            width: 50%;
+        }
+         @include media-575 {
+            flex: 0 0 100%;
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+    .solve-list {
+        background-color: $white;
+        padding: 24px; padding-bottom: 0;
+        .count-num{
+            color: #4A5FC8;
+            display: block;
+            font-weight: 600;
+            line-height: 1;
+            margin-bottom: 56px;
+            @include font-size(40);
+            @include media-1199 {
+                margin-bottom: 40px;
+                @include font-size(34);
+            }
+            @include media-767  {
+                margin-bottom: 25px;
+            }
+        }
+        .heading-4 ,
+        h4 {
+            margin-bottom: 15px;
+            @include media-575 {
+                margin-bottom: 10px;
+            }
+        }
+        ul {
+            gap: 8px;
+            li {
+                color: $trinaryColor;
+                font-weight: 500;
+                padding-left: 28px;
+                &:before {
+                    color: #344BBD;
+                    left: 4px;
+                    top: 1px;
+                }
+                @include font-size(16);
+            }
+            @include media-575 {
+                gap: 5px;
+            }
+        }
+        @include border-radius(20px);
+        @include media-1199 {
+            padding: 18px;
+            padding-bottom: 0;
+            @include border-radius(12px);
+        }
+        @include media-991 {
+            padding: 20px;
+            @include border-radius(12px);
+        }
+    }   
+}
+
+
+

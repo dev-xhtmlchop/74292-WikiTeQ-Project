@@ -1,0 +1,17 @@
+{
+  "env": {
+    "browser": true,
+    "jquery": true
+  },
+  "extends": [
+    "standard",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": [
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": "error",
+    "no-var": "warn"
+  }
+}

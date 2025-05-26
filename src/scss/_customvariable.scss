@@ -1,0 +1,35 @@
+$white : #fff;
+$body-bg :$white ;
+$black :#000000;
+$body-color: $black;
+$primaryColor: $body-color;
+$secondaryColor: #000316;
+$trinaryColor: rgba(0,0,0,.7);
+$whiteLight : rgba(255,255,255,.7);
+$blue : #344BBD;
+$lightBlue : rgba(149, 164, 244, 0.3);
+$lightBlue01 : rgba(149, 164, 244, 0.6);
+$lightBlue02 : #8291DD;
+$lightBlue03 : #B0BAF4;
+$darkBlue : #010B53;
+$sky_color : #4997ca;
+$grayColor : #929292;
+$grayColor02: #8388A1;
+$form_border : rgba(131,136,160,0.40);
+$font-family-sans-serif: "Urbanist", sans-serif;
+
+
+$fluid-title-h1 : clamp(28px, 4.444vw, 64px);
+$fluid-title-h2 : clamp(26px, 4.167vw, 60px);	
+$fluid-title-h3 : clamp(24px, 3.056vw, 44px);
+$fluid-title-h4 : clamp(22px, 2.5vw, 36px);
+$fluid-title-h5 : clamp(17px, 1.67vw, 24px);
+$fluid-title-h6 : clamp(14px, 1vw, 18px);
+
+$font-24-14 : clamp(15px, 1.25vw + 10px, 24px);
+$font-18-15 : clamp(15px, 0.417vw + 13.67px, 18px);
+$font-18-14 : clamp(14px, 0.694vw + 11.78px, 18px);
+$font-16-14 : clamp(14px, 0.278vw + 13.11px, 16px);
+$font-16-11 : clamp(11px, 0.694vw + 8.78px, 16px);
+
+

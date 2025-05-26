@@ -1,0 +1,60 @@
+.cust-btn {
+    align-items: center;
+    border: none;
+    border-radius: 8px;
+    box-shadow: none;
+    color: $blue;
+    display: inline-flex;
+    font-weight: 600;
+    justify-content: center;
+    line-height: normal;
+    outline: none;
+    padding: 16px 32px;
+    transition: all .5s;
+    white-space: nowrap;
+    &.btn-sm {
+        padding: 12px 25px;
+        @include media-1199 { 
+            padding: 11px 16px;
+        }
+        @include media-767 {
+            height: 42px; 
+            padding: 10px 14px;
+        }
+    }
+    &.cust-btn-primary {        
+        background-color: $blue;
+        border: 1px solid $blue;
+        color: $white;
+        &:hover{
+            background-color: $white;
+            color: $blue;
+        }        
+    }  
+    &.cust-btn-secondary{
+        background-color: $white;
+        border: 1px solid $white;
+        color: $blue;
+        &:hover{
+            background-color: transparent;
+            color: $white;
+        }
+    } 
+    &.cust-btn-trinary{
+        background-color: transparent;
+        border: 1px solid $blue;
+        color: $blue;
+        &:hover{
+            background-color: $blue;
+            color: $white;
+        }
+    }
+    @include font-size(16);
+    @include media-1199 {
+        padding: 15px 20px; 
+        @include font-size(14);
+    }
+    @include media-767 { 
+        padding: 12px 15px;
+    }
+}

@@ -1,0 +1,110 @@
+ .management-section {
+    padding-top: 148px;
+    position: relative;
+    .container {
+        text-align: center;
+    }
+    .heading-3 , h3 {
+        margin-bottom: 30px;
+        @include media-991 {
+            margin-bottom: 20px;
+        }
+        @include media-575 {
+            margin-bottom: 15px;
+        }
+    }
+    p:not(.heading-3) {
+        color: $trinaryColor;
+        line-height: 1.4;
+        margin: 0 auto 30px;
+        max-width: 360px;
+        @include font-size(16);
+        @include media-991 {
+            margin-bottom: 18px;
+        }
+        @include media-575 {
+            margin-bottom: 12px;
+        }
+    }
+    .heading-h2 {
+        margin: 0 auto 35px;
+        max-width: 850px;
+        @include media-767 {
+            margin-bottom: 22px;
+        }
+    }
+   
+    @include media-991 {
+        padding-top: 80px;
+    }
+    @include media-575 {
+        padding: 120px 0;
+    }
+    
+}
+.management-section.secureText{
+    padding-top: 150px;
+    h2 {
+        margin: 0 auto 35px;
+        max-width: 850px;
+    }
+    @include media-1199 {
+        padding-top: 100px;
+    }
+    @include media-991{
+        padding-top: 70px;
+    }
+    @include media-575 {
+        padding: 55px 0;
+    }
+}
+
+.take-control-section {    
+    &:after {
+        background-image: url('../images/right-flower.png');
+        background-position: bottom right;
+        bottom: 0;
+        height: 608px;
+        right: 0;
+        width: 470px;
+    }
+    &:before {
+        background-image: url('../images/left-flower.png');
+        background-position: top left;
+        height: 557px;
+        left: 0;
+        top: 0;
+        width: 479px;
+    }
+    &:after ,
+    &:before {
+        background-repeat: no-repeat;
+        background-size: contain;
+        content: '';
+        position: absolute;
+        @include media-1199 {
+            max-height: 450px;
+            max-width:  370px;
+        }
+        @include media-991 {
+            max-height: 400px;
+            max-width:  280px;
+        }
+        @include media-767 {
+            max-width:  200px;
+        }
+        @include media-575 {
+            max-width:  140px;
+        }
+    }
+}
+@supports (image-rendering: -webkit-optimize-contrast) {
+    .take-control-section {    
+        &:after {
+            background-image: url('../images/right-flower.webp');
+        }
+        &:before {
+            background-image: url('../images/left-flower.webp');
+        }
+    }
+}

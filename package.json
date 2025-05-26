@@ -1,0 +1,45 @@
+{
+    "name": "new-gulp-setup",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "lint": "eslint src/js/**/*.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "browserslist": [
+        "> 1%",
+        "last 2 versions",
+        "not dead"
+    ],
+    "devDependencies": {
+        "autoprefixer": "^10.4.21",
+        "eslint": "^8.0.1",
+        "eslint-config-prettier": "^10.1.5",
+        "eslint-config-standard": "^17.1.0",
+        "eslint-plugin-import": "^2.31.0",
+        "eslint-plugin-n": "^17.18.0",
+        "eslint-plugin-prettier": "^5.4.0",
+        "eslint-plugin-promise": "^6.0.0",
+        "eslint-plugin-standard": "^5.0.0",
+        "gulp": "^4.0.2",
+        "gulp-clean": "^0.4.0",
+        "gulp-clean-css": "^4.3.0",
+        "gulp-dart-sass": "^1.1.0",
+        "gulp-eslint": "^6.0.0",
+        "gulp-minify": "^3.1.0",
+        "gulp-postcss": "^10.0.0",
+        "gulp-rename": "^2.0.0",
+        "gulp-sourcemaps": "^3.0.0",
+        "gulp-wait": "^0.0.2",
+        "postcss-reporter": "^7.1.0",
+        "postcss-scss": "^4.0.9",
+        "postcss-sorting": "^9.1.0",
+        "prettier": "^3.5.3",
+        "stylelint": "^16.19.1",
+        "stylelint-config-standard": "^38.0.0",
+        "stylelint-config-standard-scss": "^15.0.1",
+        "stylelint-order": "^7.0.0"
+    }
+}
